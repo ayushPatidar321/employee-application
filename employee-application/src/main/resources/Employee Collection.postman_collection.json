@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "902ed7e9-d0b0-4a82-9ea9-dd59b79d4a49",
+		"name": "Employee Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveApplication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "countryCode",
+						"value": "MY",
+						"type": "text"
+					},
+					{
+						"key": "product",
+						"value": "ATL",
+						"type": "text"
+					},
+					{
+						"key": "channel",
+						"value": "A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"screenNo\": \"ATLC-3\",\r\n        \"stpRefNo\": \"10000\",\r\n        \"consentFlag\": \"true\",\r\n        \"employeeStatus\": \"PENDING\",\r\n        \"financialDetails\": {\r\n            \"financeAmount\": 10.0,\r\n            \"financePeriod\": \"5Y\",\r\n            \"financeType\": \"LOAN\"\r\n        },\r\n        \"region\": \"MY\",\r\n        \"branchName\": \"SAMPLE\",\r\n        \"documentDetails\": {\r\n            \"drivingLicenseDocumentId\": \"A100\",\r\n            \"vehicleSalesOrderDocumentId\": \"B00\",\r\n            \"incomeDocumentId\": \"C00\"\r\n        },\r\n        \"americanCitizen\": \"N\",\r\n        \"myTaxPayer\": \"Y\",\r\n        \"contactForMarketing\": \"YES\",\r\n        \"personalDetails\": {\r\n            \"customerFullName\": \"Raj K\",\r\n            \"idType\": {\r\n                \"code\": \"A\",\r\n                \"description\": \"Adhar\"\r\n            },\r\n            \"idNumber\": \"45654756\",\r\n            \"email\": \"a@b.c\",\r\n            \"mobileNumber\": \"1234567890\",\r\n            \"customerDOB\": \"12-04-1992\",\r\n            \"countryOfCitizenship\": {\r\n                \"code\": \"IN\",\r\n                \"description\": \"INDIA\"\r\n            }\r\n        },\r\n        \"residentialDetails\": {\r\n            \"addressLine1\": \"abc\",\r\n            \"addressLine2\": \"xyz\",\r\n            \"addressLine3\": \"PQR\",\r\n            \"postCode\": \"123\",\r\n            \"state\": {\r\n                \"code\": \"TE\",\r\n                \"description\": \"UP\"\r\n            },\r\n            \"city\": \"PUNE\"\r\n        },\r\n        \"updatedFlag\": true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SIT_HOST}}/api/v1/consumer/saveInputData",
+					"host": [
+						"{{SIT_HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"consumer",
+						"saveInputData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getApplicationList",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployeeDetails",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "removeRecord",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ExternalCall",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
